@@ -9,8 +9,9 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'https://mern-frontend-xf3w.onrender.com', // allow this frontend origin
-  credentials: true, // if you send cookies or auth headers
+  origin: 'https://mern-frontend-xf3w.onrender.com', // your frontend domain here
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true, // if you use cookies or authentication
 }));
 
 // Remove default express.json()
