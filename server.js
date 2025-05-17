@@ -8,7 +8,10 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://mern-frontend-xf3w.onrender.com', // allow this frontend origin
+  credentials: true, // if you send cookies or auth headers
+}));
 
 // Remove default express.json()
 // app.use(express.json());
